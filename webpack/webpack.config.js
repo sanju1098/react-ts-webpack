@@ -18,27 +18,41 @@ module.exports = {
 				],
 			},
 
-			//Webpack to support CSS files.
+			// Webpack to support CSS files.
 			{
 				test: /\.css$/,
 				use: ["style-loader", "css-loader"],
 			},
 
-			//Webpack to support Images/SVG/GIF.
-			//STEP A:
+			// Webpack to support Images/SVG/GIF.
+			// STEP A:
 			{
 				test: /\.(png|svg|jpg|jpeg|gif)$/i,
 				use: "file-loader",
 			},
-			//STEP B: for Image & Icons
+			// STEP B.1: for Image & Icons
 			// {
 			// 	test: /\.(?:ico|png|jpg|jpeg|gif)$/i,
 			// 	type: "asset/resource",
 			// },
+
+			// STEP B.2: for SVG
 			// {
 			// 	test: /\.(woff(2)?|eot|ttf|otf|svg)$/i,
 			// 	type: "asset/inline",
 			// },
+
+			// Webpack to support SASS/SCSS.
+			{
+				test: /\.s[ac]ss$/i,
+				use: ["style-loader", "css-loader", "sass-loader"],
+			},
+
+			// Webpack to support LESS.
+			{
+				test: /\.less$/,
+				use: ["style-loader", "css-loader", "less-loader"],
+			},
 		],
 	},
 	output: {
