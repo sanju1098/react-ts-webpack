@@ -17,6 +17,28 @@ module.exports = {
 					},
 				],
 			},
+
+			//Webpack to support CSS files.
+			{
+				test: /\.css$/,
+				use: ["style-loader", "css-loader"],
+			},
+
+			//Webpack to support Images/SVG/GIF.
+			//STEP A:
+			{
+				test: /\.(png|svg|jpg|jpeg|gif)$/i,
+				use: "file-loader",
+			},
+			//STEP B: for Image & Icons
+			// {
+			// 	test: /\.(?:ico|png|jpg|jpeg|gif)$/i,
+			// 	type: "asset/resource",
+			// },
+			// {
+			// 	test: /\.(woff(2)?|eot|ttf|otf|svg)$/i,
+			// 	type: "asset/inline",
+			// },
 		],
 	},
 	output: {
