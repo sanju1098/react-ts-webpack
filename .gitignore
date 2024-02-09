@@ -1,5 +1,7 @@
 build
 node_modules
 dist
+qa_build
+prod_build
 
 Notes.txt

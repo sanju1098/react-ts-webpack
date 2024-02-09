@@ -56,7 +56,7 @@ module.exports = {
 		],
 	},
 	output: {
-		path: path.resolve(__dirname, "..", "./build"),
+		path: path.resolve(__dirname, "..", `./${process.env.NODE_ENV}_build`),
 		filename: "bundle.js",
 	},
 	plugins: [
