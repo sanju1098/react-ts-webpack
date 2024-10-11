@@ -10,4 +10,8 @@ module.exports = {
 			"process.env.mode": JSON.stringify("QA Mode"),
 		}),
 	],
+	stats: {
+		modules: false, // Hide module information
+		assets: false, // Hide asset information
+	},
 };

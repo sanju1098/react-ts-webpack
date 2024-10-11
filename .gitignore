@@ -1,8 +1,4 @@
-build
 node_modules
-dist
-qa_build
-prod_build
-stg_build
+dist*/
 
 Notes.txt

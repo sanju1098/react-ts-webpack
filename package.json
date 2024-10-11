@@ -4,19 +4,21 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start:dev": "cross-env NODE_ENV=development webpack serve --config webpack/webpack.config.js --env env=dev --open",
-		"start:qa": "cross-env NODE_ENV=qa webpack serve --config webpack/webpack.config.js --env env=qa --open",
+		"start": "cross-env NODE_ENV=development webpack serve --config webpack/webpack.config.js --env env=dev --open",
 		"build:qa": "cross-env NODE_ENV=qa webpack --config webpack/webpack.config.js --env env=qa",
+		"start:qa": "cross-env NODE_ENV=qa webpack --config webpack/webpack.config.js --env env=qa && serve dist_qa/ --single",
 		"build:stg": "cross-env NODE_ENV=stg webpack --config webpack/webpack.config.js --env env=stg",
-		"start:production": "cross-env NODE_ENV=prod webpack --config webpack/webpack.config.js --env env=prod && serve prod_build/",
-		"build:production": "cross-env NODE_ENV=prod webpack --config webpack/webpack.config.js --env env=prod"
+		"start:stg": "cross-env NODE_ENV=stg webpack --config webpack/webpack.config.js --env env=stg  && serve dist_stg/ --single",
+		"build:production": "cross-env NODE_ENV=prod webpack --config webpack/webpack.config.js --env env=prod",
+		"start:production": "cross-env NODE_ENV=prod webpack --config webpack/webpack.config.js --env env=prod && serve dist_prod/ --single"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"react-router-dom": "^6.26.2"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.23.6",

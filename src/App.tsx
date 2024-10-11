@@ -1,21 +1,17 @@
 import "./App.css";
 import "./App.scss";
-import IMAGE from "./Astronaut.jpg";
-import SVG from "./tree.svg";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HomePage } from "./pages/HomePage";
+import InfoPage from "./pages/InfoPage";
 
 const App = () => {
 	return (
-		<>
-			{/* <span>ENV_Mode: {process.env.NODE_ENV}</span>
-			{" ----- "}
-			<span>Plugin_Mode: {process.env.mode}</span> */}
-			<h1>React Typescript WebPack</h1>
-			<img src={IMAGE} alt="Image" width="300" height="200" />
-			<img src={SVG} alt="Image" width="300" height="200" />
-			<div className="myClass">
-				This text will be styled by the imported SCSS or LESS.
-			</div>
-		</>
+		<Router>
+			<Routes>
+				<Route path="/" element={<HomePage />} />
+				<Route path="/info" element={<InfoPage />} />
+			</Routes>
+		</Router>
 	);
 };
 

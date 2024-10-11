@@ -6,6 +6,10 @@ module.exports = {
 	resolve: {
 		extensions: [".tsx", ".ts", ".js"],
 	},
+	devServer: {
+		historyApiFallback: true, // This ensures all routes are served by index.html
+		compress: true, // delivery of your static files by reducing their size
+	},
 	module: {
 		rules: [
 			{
@@ -56,8 +60,9 @@ module.exports = {
 		],
 	},
 	output: {
-		path: path.resolve(__dirname, "..", `./${process.env.NODE_ENV}_build`),
+		path: path.resolve(__dirname, "..", `./dist_${process.env.NODE_ENV}`),
 		filename: "bundle.js",
+		publicPath: "/",
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
