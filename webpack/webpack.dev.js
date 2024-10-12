@@ -11,7 +11,7 @@ module.exports = {
 	//Optional
 	plugins: [
 		new webpack.DefinePlugin({
-			"process.env.mode": JSON.stringify("Development"),
+			"process.env.mode": JSON.stringify("Development Mode"),
 		}),
 	],
 	stats: {

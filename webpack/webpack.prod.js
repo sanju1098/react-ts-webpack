@@ -11,7 +11,7 @@ module.exports = {
 	//Optional
 	plugins: [
 		new webpack.DefinePlugin({
-			"process.env.mode": JSON.stringify("Production"),
+			"process.env.mode": JSON.stringify("Production Mode"),
 		}),
 	],
 	stats: {

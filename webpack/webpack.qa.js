@@ -7,7 +7,7 @@ module.exports = {
 	devtool: "cheap-module-source-map",
 	plugins: [
 		new webpack.DefinePlugin({
-			"process.env.mode": JSON.stringify("QA Mode"),
+			"process.env.mode": JSON.stringify("QA/Test Mode"),
 		}),
 	],
 	stats: {
