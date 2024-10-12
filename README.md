@@ -1,19 +1,20 @@
-* Create a new folder.
-* run cmd  `git init`.
-* create `.gitignore` file.
-* create `src` & `build` folder.
-* run cmd `npm init --y`.
-* create `index.html` file.
-* run cmd `yarn add react react-dom`.
-* run cmd `yarn add -D typescript @types/react @types/react-dom`.
-* Configuration for typescript compiler.
-* Add tsconfig.json file in root.
-* create `App.tsx` & `index.tsx` (entry-point) file in src. 
-* run cmd `yarn add -D @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript.`
-* At root create .babelrc file.
-* run cmd `yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin`.
-* run cmd `yarn add -D babel-loader`.
-* In root folder create webpack folder. Inside webpack folder create webpack.config.ts (can also be js) file.
+- Create a new folder.
+- run cmd `git init`.
+- create `.gitignore` file.
+- create `src` & `build` folder.
+- run cmd `npm init --y`.
+- create `index.html` file.
+- run cmd `yarn add react react-dom`.
+- run cmd `yarn add -D typescript @types/react @types/react-dom`.
+- Configuration for typescript compiler.
+- Add tsconfig.json file in root.
+- create `App.tsx` & `index.tsx` (entry-point) file in src.
+- run cmd `yarn add -D @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript.`
+- At root create .babelrc file.
+- run cmd `yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin`.
+- run cmd `yarn add -D babel-loader`.
+- In root folder create webpack folder. Inside webpack folder create webpack.config.ts (can also be js) file.
+
 ```
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -48,9 +49,10 @@ module.exports = {
 	],
 };
 ```
-* In package.json inside scripts write start script. **`"start" : "webpack serve --config webpack/webpack.config.js --open"`**
-* create `App.css` file inside src folder
-* run cmd --> yarn add -D css-loader style-loader.
-* in src folder create declaration.d.ts file.
-* add contents `declare module "*.png/jpg/svg`...etc"
-* run cmd `yarn add -D file-loader`.
+
+- In package.json inside scripts write start script. **`"start" : "webpack serve --config webpack/webpack.config.js --open"`**
+- create `App.css` file inside src folder
+- run cmd `yarn add -D css-loader style-loader`.
+- in src folder create declaration.d.ts file.
+- add contents `declare module "*.png/jpg/svg`...etc"
+- run cmd `yarn add -D file-loader`.
